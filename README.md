@@ -11,6 +11,11 @@ The below image shows what the collision shapes look like in Tiled. Each index m
 
 ![screenshot 2](/screenshots/collision_tiled.png?raw=true)
 
-The level itself can be editted while the demo is running. The demo will detect edits and reload the level dynamically. Here's an example:
+The level itself can be editted while the demo is running. The demo will detect edits and reload the level dynamically. Here's an example (Tiled editor on the left, and the demo on the right):
 
 ![screenshot 3](/screenshots/tinycavestory_live_edit.gif?raw=true)
+
+Some more features planned to be added:
+* Some jump sound effects and looping music with tinysound.h
+* A little bit of text rendering using rasterized font from Cave Story (with unreleased tinyfont.h)
+* Implementing some animation for the Quote instead of using a single image (with unreleased tinyanim.h)
