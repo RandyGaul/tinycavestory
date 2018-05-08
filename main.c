@@ -249,7 +249,7 @@ void setup_SDL_and_glad()
 	int screen_h = 480;
 	int centered_x = dm.w / 2 - screen_w / 2;
 	int centered_y = dm.h / 2 - screen_h / 2;
-	window = SDL_CreateWindow("tinyspritebatch example", centered_x, centered_y, screen_w, screen_h, SDL_WINDOW_OPENGL|SDL_WINDOW_ALLOW_HIGHDPI);
+	window = SDL_CreateWindow("tinycavestory demonstration", centered_x, centered_y, screen_w, screen_h, SDL_WINDOW_OPENGL|SDL_WINDOW_ALLOW_HIGHDPI);
 	ctx_gl = SDL_GL_CreateContext(window);
 
 	gladLoadGLES2Loader(SDL_GL_GetProcAddress);
