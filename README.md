@@ -10,3 +10,7 @@ Tiled from [mapeditor.org](https://www.mapeditor.org/) was used to craft the til
 The below image shows what the collision shapes look like in Tiled. Each index maps to a tile in the Cavestory tileset. By convention, the indices line up to define the shape for each different kind of tile. This is preferred over Tiled's built-in collision editor because it A) saves memory and map load time, and B) can be easily visualized.
 
 ![screenshot 2](/screenshots/collision_tiled.png?raw=true)
+
+The level itself can be editted while the demo is running. The demo will detect edits and reload the level dynamically. Here's an example:
+
+![screenshot 3](/screenshots/tinycavestory_live_edit.gif?raw=true)
