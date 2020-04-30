@@ -319,8 +319,8 @@ tgContext* tgMakeCtx(uint32_t max_draw_calls, uint32_t clear_bits, uint32_t sett
 	tgAddAttribute(&vd, "in_pos", 3, TG_FLOAT, 0);
 	tgAddAttribute(&vd, "in_col", 3, TG_FLOAT, TG_LINE_STRIDE / 2);
 	tgMakeRenderable(&ctx->line_r, &vd);
-	const char* vs = "#version 300 es\nuniform mat4 u_mvp;in vec3 in_pos;in vec3 in_col;out vec3 v_col;void main(){v_col = in_col;gl_Position = u_mvp * vec4(in_pos, 1);}";
-	const char* ps = "#version 300 es\nprecision mediump float;in vec3 v_col;out vec4 out_col;void main(){out_col = vec4(v_col, 1);}";
+	const char* vs = "#version 330\nuniform mat4 u_mvp;in vec3 in_pos;in vec3 in_col;out vec3 v_col;void main(){v_col = in_col;gl_Position = u_mvp * vec4(in_pos, 1);}";
+	const char* ps = "#version 330\nprecision mediump float;in vec3 v_col;out vec4 out_col;void main(){out_col = vec4(v_col, 1);}";
 	tgLoadShader(&ctx->line_s, vs, ps);
 	tgSetShader(&ctx->line_r, &ctx->line_s);
 	tgLineColor(ctx, 1.0f, 1.0f, 1.0f);

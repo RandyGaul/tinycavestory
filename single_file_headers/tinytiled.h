@@ -1230,7 +1230,7 @@ tinytiled_map_t* tinytiled_load_map_from_file(const char* path, void* mem_ctx)
 	return map;
 }
 
-#define TINYTILED_CHECK(X, Y) do { if (!(X)) { tinytiled_error_reason = Y; __debugbreak(); goto tinytiled_err; } } while (0)
+#define TINYTILED_CHECK(X, Y) do { if (!(X)) { tinytiled_error_reason = Y; goto tinytiled_err; } } while (0)
 #define TINYTILED_FAIL_IF(X) do { if (X) { goto tinytiled_err; } } while (0)
 
 static int tinytiled_isspace(char c)
